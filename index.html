@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores Amarillas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Langing Screen -->
+    <section id="landing-screen" class="screen active">
+        <div class="glass-card">
+            <h1 class="title">Una sorpresa para ti...</h1>
+            <p class="subtitle">Hoy es un día especial, averigua qué hay detrás.</p>
+            
+            <div class="input-group">
+                <input type="text" id="name-input" placeholder="Ingresa tu nombre..." autocomplete="off">
+                <button id="reveal-btn">Revelar sorpresa</button>
+            </div>
+            <p id="error-message" class="error hidden">Por favor, dime tu nombre.</p>
+        </div>
+        
+        <!-- Floating background petals -->
+        <div class="bg-petals" id="landing-petals"></div>
+    </section>
+
+    <!-- Gift Screen -->
+    <section id="gift-screen" class="screen hidden">
+        <canvas id="flower-canvas"></canvas>
+        
+        <div class="gift-content">
+            <h1 id="greeting-title" class="gift-title">Para ti, <span id="friend-name"></span></h1>
+            <p id="custom-message" class="gift-message">Mensaje...</p>
+        </div>
+
+        <!-- Audio Player (Soft acoustic/romantic royalty free placeholder) -->
+        <audio id="bg-music" loop>
+            <source src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3?filename=soft-romantic-piano-12345.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+
+    <!-- YouTube Player -->
+    <div style="position: absolute; left: -9999px; top: -9999px;">
+        <div id="ytplayer"></div>
+    </div>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="main.js"></script>
+</body>
+</html>
