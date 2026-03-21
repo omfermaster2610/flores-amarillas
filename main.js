@@ -23,6 +23,11 @@ window.onYouTubeIframeAPIReady = function () {
                     ytPlayer.loadVideoById(pendingVideoId);
                     pendingVideoId = null;
                 }
+            },
+            'onStateChange': function (event) {
+                if (event.data === YT.PlayerState.ENDED) {
+                    ytPlayer.playVideo();
+                }
             }
         }
     });
