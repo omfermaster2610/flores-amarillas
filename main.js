@@ -92,6 +92,8 @@ class MessageGenerator {
 
 const specificFriends = {
     "danna": { msg: "Danna, What's up bro, Feliz Dia da Flor Amarela, Manigga", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
+    "victoria": { msg: "Un dia de estos me acuerda de visitar panamá, la buena jajs", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
+    "luna": { msg: "Un dia de estos me acuerda de visitar panamá, la buena jajs", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
     "erika": { msg: "Quiubo angela, Feliz dia de las flores amarillas, dele gracias a Antigravity por esto jajaj", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
     "akire": { msg: "Quiubo angela, Feliz dia de las flores amarillas, dele gracias a Antigravity por esto jajaj", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
     "aleja": { msg: "Quiubo angela, Feliz dia de las flores amarillas, dele gracias a Antigravity por esto jajaj", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
@@ -113,7 +115,7 @@ const specificFriends = {
     "gina": { msg: "Gina, gracias por tu alegría de siempre. ¡Te mereces lo mejor! 🙏🙏🙏", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" }
 };
 
-const maleBrosNames = ["uri", "jaider", "luis", "sebastian", "benja", "solano", "jesus", "german"];
+const maleBrosNames = ["uri", "jaider", "luis", "sebastian", "benja", "solano", "jesus", "german", "anderson", "Miguel", "Camilo", "mapache", "omar", "carlos", "sergio", "checho", "dimas"];
 
 // ...
 
@@ -153,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (maleBrosNames.some(bro => new RegExp(`\\b${bro}\\b`).test(originalNormalized))) {
             isBro = true;
-            finalMessage = "Bro, la verdad las flores amarillas son para ellas... ¡Para los verdaderos hermanos hay un árbol de aguacates para las carnitas asadas! Jajaja, un abrazo fuerte. ¡Feliz día!";
+            finalMessage = "Papi, feliz dia de las flores amarillas ára usted mi rey, que me le vaya bien y cuidese ese cuerpo, lo tqm";
             finalSong = "https://www.youtube.com/watch?v=loduYZcFRtE"; // Some bro/funny default acoustic song
         } else {
             // Find specific female
