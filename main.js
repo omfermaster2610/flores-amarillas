@@ -91,31 +91,32 @@ class MessageGenerator {
 }
 
 const specificFriends = {
-    "danna": { msg: "Danna, What's up bro, Feliz Dia da Flor Amarela, Manigga", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
-    "victoria": { msg: "Un dia de estos me acuerda de visitar panamá, la buena jajs", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
-    "luna": { msg: "Un dia de estos me acuerda de visitar panamá, la buena jajs", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
-    "erika": { msg: "Quiubo angela, Feliz dia de las flores amarillas, dele gracias a Antigravity por esto jajaj", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
-    "akire": { msg: "Quiubo angela, Feliz dia de las flores amarillas, dele gracias a Antigravity por esto jajaj", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
-    "aleja": { msg: "Quiubo angela, Feliz dia de las flores amarillas, dele gracias a Antigravity por esto jajaj", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
-    "pluton": { msg: "Quiubo angela, Feliz dia de las flores amarillas, dele gracias a Antigravity por esto jajaj", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
-    "adriana": { msg: "Adriana, Feliz dia para sumerce mi Casi-Ingeniera, muchos éxitos para lo que venga.", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
-    "maria jose": { msg: "Hola majo, Me avisa para jugar mario kart, mientras tenga esto de regalo", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
-    "majo": { msg: "Hola majo, Me avisa para jugar mario kart, mientras tenga esto de regalo", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
-    "valentina": { msg: "Hola valen, cuando tenga un control jugamos al hollow, mientras le regalo esas flores jajaj estan cheveres no?", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
-    "monica": { msg: "Quiubo monica, feliz dia de la flor amarilla o algo asi, igual disfrute de la animación", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
-    "negra": { msg: "Quiubo negra, feliz dia de la flor amarilla o algo asi, igual disfrute de la animación", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
-    "juliet": { msg: "HOLAAAAAAAAAAA buenos dias, feliz dia de las flores amarillas aaaaaaaaa", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
-    "juli": { msg: "HOLAAAAAAAAAAA buenos dias, feliz dia de las flores amarillas aaaaaaaaa", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
-    "dayana": { msg: "HOLAAAAAAAAAAA buenos dias, feliz dia de las flores amarillas aaaaaaaaa", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
-    "karen": { msg: "Hola amiga, feliz dia de las flores amarillas, con mi mas sincero agradecimiento le muestro este fondo tan bacano para que lo disfrute amiga", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
-    "katherine": { msg: "Hola Kathe, feliz dia de las flores amarillas jajsj", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
-    "kathe": { msg: "Hola Kathe, feliz dia de las flores amarillas jajsj", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
-    "Mama kathe": { msg: "Hola Kathe, feliz dia de las flores amarillas jajsj", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
-    "yelitza": { msg: "Buenas buenas yelitza, como se encuentra el dia de hoy? espero que bien, aqui un detalle pa sumerce", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" },
-    "gina": { msg: "Gina, gracias por tu alegría de siempre. ¡Te mereces lo mejor! 🙏🙏🙏", song: "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3" }
+    "danna": { msg: "What's up bro, Feliz Dia da Flor Amarela, Manigga", song: "https://youtu.be/ALRxqOpMewE?si=zRLbh8wxO8Izh30V" },
+    "victoria": { msg: "Un dia de estos me acuerda de visitar panamá, la buena jajs", song: "https://youtu.be/XWX_j3b9ZeE?si=MCr_2Rf3pnmgYnRW" },
+    "luna": { msg: "Un dia de estos me acuerda de visitar panamá, la buena jajs", song: "https://youtu.be/XWX_j3b9ZeE?si=MCr_2Rf3pnmgYnRW" },
+    "erika": { msg: "Quiubo angela, Feliz dia de las flores amarillas, dele gracias a Antigravity por esto jajaj", song: "https://www.youtube.com/watch?v=ow083mzYweE" },
+    "akire": { msg: "Quiubo angela, Feliz dia de las flores amarillas, dele gracias a Antigravity por esto jajaj", song: "https://www.youtube.com/watch?v=ow083mzYweE" },
+    "aleja": { msg: "Quiubo angela, Feliz dia de las flores amarillas, dele gracias a Antigravity por esto jajaj", song: "https://www.youtube.com/watch?v=ow083mzYweE" },
+    "pluton": { msg: "Quiubo angela, Feliz dia de las flores amarillas, dele gracias a Antigravity por esto jajaj", song: "https://www.youtube.com/watch?v=ow083mzYweE" },
+    "adriana": { msg: "Adriana, Feliz dia para sumerce mi Casi-Ingeniera, muchos éxitos para lo que venga.", song: "https://youtu.be/594smhY4o6U?si=9LFQMMZ6fUsbuYt-" },
+    "maria jose": { msg: "Hola majo, Me avisa para jugar mario kart, mientras disfrute", song: "https://youtu.be/t6YNGmcbqUY?si=o0LjZzhpNMRbVCiq" },
+    "majo": { msg: "Hola majo, Me avisa para jugar mario kart, mientras disfrute", song: "https://youtu.be/t6YNGmcbqUY?si=o0LjZzhpNMRbVCiq" },
+    "valentina": { msg: "Hola valen, cuando tenga un control jugamos al hollow, mientras le regalo esas flores jajaj estan cheveres no?", song: "https://youtu.be/ssMSyTNfKTo?si=TD0Vq7GbNEzxtVB7" },
+    "monica": { msg: "Quiubo monica, feliz dia de la flor amarilla o algo asi, igual disfrute de la animación", song: "https://www.youtube.com/watch?v=yADhwRnnGKA" },
+    "negra": { msg: "Quiubo negra, feliz dia de la flor amarilla o algo asi, igual disfrute de la animación", song: "https://www.youtube.com/watch?v=yADhwRnnGKA" },
+    "juliet": { msg: "HOLAAAAAAAAAAA buenos dias, feliz dia de las flores amarillas aaaaaaaaa", song: "https://youtu.be/rVJ5Io57UBk?si=qQSZSgz11U0jP1ww" },
+    "juli": { msg: "HOLAAAAAAAAAAA buenos dias, feliz dia de las flores amarillas aaaaaaaaa", song: "https://youtu.be/rVJ5Io57UBk?si=qQSZSgz11U0jP1ww" },
+    "dayana": { msg: "HOLAAAAAAAAAAA buenos dias, feliz dia de las flores amarillas aaaaaaaaa", song: "https://youtu.be/rVJ5Io57UBk?si=qQSZSgz11U0jP1ww" },
+    "karen": { msg: "Hola amiga, feliz dia de las flores amarillas, con mi mas sincero agradecimiento le muestro este fondo tan bacano para que lo disfrute amiga", song: "https://www.youtube.com/watch?v=S7gMzYqXIZc" },
+    "katherine": { msg: "Hola Kathe, feliz dia de las flores amarillas jajsj", song: "https://www.youtube.com/watch?v=S7gMzYqXIZc" },
+    "kathe": { msg: "Hola Kathe, feliz dia de las flores amarillas jajsj", song: "https://www.youtube.com/watch?v=S7gMzYqXIZc" },
+    "Mama kathe": { msg: "Hola Kathe, feliz dia de las flores amarillas jajsj", song: "https://www.youtube.com/watch?v=S7gMzYqXIZc" },
+    "yelitza": { msg: "Buenas buenas yelitza, como se encuentra el dia de hoy? espero que bien, aqui un detalle pa uste", song: "https://youtu.be/Fkw4OleMP6s?si=11jQhBsAWkYB5cOm" },
+    "dimas": { msg: "Hola peruviano, cuando unas retas en el umamusume mi causamigo", song: "https://youtu.be/8sp8DRXgh8c?si=NNoHp6VJ6dsu8JNd" },
+    "gina": { msg: "Ginaaa, gracias por su alegría de siempre, se merece lo mejor 🙏🙏🙏", song: "https://youtu.be/nfmdbKeSh7I?si=tZCTsCKkthT_B5HU" }
 };
 
-const maleBrosNames = ["uri", "jaider", "luis", "sebastian", "benja", "solano", "jesus", "german", "anderson", "Miguel", "Camilo", "mapache", "omar", "carlos", "sergio", "checho", "dimas"];
+const maleBrosNames = ["uri", "jaider", "luis", "sebastian", "benja", "solano", "jesus", "german", "anderson", "Miguel", "Camilo", "mapache", "omar", "carlos", "sergio", "checho", "victor", "stiven", "steven"];
 
 // ...
 
@@ -155,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (maleBrosNames.some(bro => new RegExp(`\\b${bro}\\b`).test(originalNormalized))) {
             isBro = true;
-            finalMessage = "Papi, feliz dia de las flores amarillas ára usted mi rey, que me le vaya bien y cuidese ese cuerpo, lo tqm";
+            finalMessage = "Papi, feliz dia de las flores amarillas para usted mi rey, que me le vaya bien y cuidese ese cuerpo, lo tqm";
             finalSong = "https://www.youtube.com/watch?v=loduYZcFRtE"; // Some bro/funny default acoustic song
         } else {
             // Find specific female
