@@ -245,22 +245,22 @@ function initFlowers(showAvocados = false, personKey = "") {
 
     let spriteImg = null;
     let spriteObj = { x: window.innerWidth / 2 - 300, y: 0, vx: 1.5, frame: 0, w: 150, h: 150, isEmoji: false, emoji: '' };
-    
+
     if (specialEffect === 'sprigatito') {
         spriteImg = new Image();
         spriteImg.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/906.png";
     } else if (specialEffect === 'turbo') {
         spriteImg = new Image();
-        spriteImg.src = "turbo.gif";
+        spriteImg.src = "https://tr.rbxcdn.com/180DAY-e064756857c15a3f57a874a0dfa37f43/420/420/Hat/Webp/noFilter";
         spriteObj.w = 200; spriteObj.h = 200;
-        spriteObj.vx = 4.0; // The turbo granny runs FAST!
+        spriteObj.vx = 4.0;
     } else if (specialEffect === 'dimas') {
         spriteImg = new Image();
-        spriteImg.src = "dimas.gif"; 
+        spriteImg.src = "https://media.tenor.com/YjhYGi2WIqUAAAAj/gold-ship-uma-musume.gif";
         spriteObj.w = 250; spriteObj.h = 250;
     } else if (specialEffect === 'rimax') {
         spriteImg = new Image();
-        spriteImg.src = "rimax.png"; 
+        spriteImg.src = "https://www.mueblesplasticoselrey.com/wp-content/uploads/2022/09/silla-dinastia.png";
         spriteObj.w = 200; spriteObj.h = 200;
     } else if (specialEffect === 'kitten') {
         spriteObj.isEmoji = true;
@@ -718,15 +718,15 @@ function initFlowers(showAvocados = false, personKey = "") {
             ctx.textBaseline = 'middle';
             ctx.fillText('⚽', 0, 0);
             ctx.restore();
-            
-            if (ball.x > (canvas.width/2) + 1200 || ball.x < (canvas.width/2) - 1200) {
+
+            if (ball.x > (canvas.width / 2) + 1200 || ball.x < (canvas.width / 2) - 1200) {
                 ball.active = false;
             }
         }
 
         if (specialEffect && specialEffect !== 'soccer' && (spriteObj.isEmoji || spriteImg)) {
             const groundY = canvas.height - 20;
-            
+
             if (specialEffect === 'rimax') {
                 spriteObj.vx = 0;
                 spriteObj.x = canvas.width / 2 + 150;
@@ -739,14 +739,14 @@ function initFlowers(showAvocados = false, personKey = "") {
                 } else {
                     spriteObj.y = Math.abs(Math.sin(spriteObj.frame)) * 25; // Brincando más alto
                 }
-                
-                if (spriteObj.x > (canvas.width/2) + 400) spriteObj.vx = -Math.abs(spriteObj.vx);
-                if (spriteObj.x < (canvas.width/2) - 400) spriteObj.vx = Math.abs(spriteObj.vx);
+
+                if (spriteObj.x > (canvas.width / 2) + 400) spriteObj.vx = -Math.abs(spriteObj.vx);
+                if (spriteObj.x < (canvas.width / 2) - 400) spriteObj.vx = Math.abs(spriteObj.vx);
             }
 
             if (spriteObj.isEmoji) {
                 ctx.save();
-                ctx.translate(spriteObj.x, groundY - spriteObj.y - (spriteObj.h/2));
+                ctx.translate(spriteObj.x, groundY - spriteObj.y - (spriteObj.h / 2));
                 if (spriteObj.vx < 0) ctx.scale(-1, 1);
                 ctx.fillStyle = 'black'; // FIX EMOJI FADING
                 ctx.font = '80px Arial'; // BIGGER
@@ -765,13 +765,13 @@ function initFlowers(showAvocados = false, personKey = "") {
                         overlay.style.width = spriteObj.w + 'px';
                         overlay.style.height = spriteObj.h + 'px';
                     }
-                    
+
                     let screenX = (canvas.width / 2 + shakeX) + (spriteObj.x - cam.x) * cam.scale;
-                    let screenY = (canvas.height / 2 + shakeY) + ((groundY - spriteObj.y - spriteObj.h/2) - cam.y) * cam.scale;
+                    let screenY = (canvas.height / 2 + shakeY) + ((groundY - spriteObj.y - spriteObj.h / 2) - cam.y) * cam.scale;
                     let scaleX = spriteObj.vx < 0 ? -1 : 1;
-                    
-                    overlay.style.left = (screenX - spriteObj.w/2) + 'px';
-                    overlay.style.top = (screenY - spriteObj.h/2) + 'px';
+
+                    overlay.style.left = (screenX - spriteObj.w / 2) + 'px';
+                    overlay.style.top = (screenY - spriteObj.h / 2) + 'px';
                     overlay.style.transform = `scale(${cam.scale * scaleX}, ${cam.scale})`;
                 }
             }
