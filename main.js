@@ -229,12 +229,36 @@ document.addEventListener("DOMContentLoaded", () => {
         giftScreen.classList.add("active");
 
         // Start flower animation
-        initFlowers(isBro);
+        initFlowers(isBro, normalizedKey);
     });
 });
 
 // --- Flower Drawing Logic (Canvas) ---
-function initFlowers(showAvocados = false) {
+function initFlowers(showAvocados = false, personKey = "") {
+    let specialEffect = null;
+    if (personKey.includes("danna")) specialEffect = 'soccer';
+    if (personKey.includes("juli") || personKey.includes("dayana")) specialEffect = 'sprigatito';
+
+    let sprigImg = null;
+    let sprig = { x: window.innerWidth / 2 - 300, y: 0, vx: 1.5, frame: 0 };
+    if (specialEffect === 'sprigatito') {
+        sprigImg = new Image();
+        sprigImg.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/906.png";
+    }
+
+    let ball = { x: 0, vx: 5, rot: 0, active: false };
+    setInterval(() => {
+        if (!ball.active) {
+            ball.active = true;
+            ball.vx = Math.random() * 3 + 3;
+            ball.x = (window.innerWidth / 2) - 800;
+            if (Math.random() > 0.5) {
+                ball.x = (window.innerWidth / 2) + 800;
+                ball.vx *= -1;
+            }
+        }
+    }, 4000);
+
     const canvas = document.getElementById('flower-canvas');
     const ctx = canvas.getContext('2d');
 
@@ -657,6 +681,41 @@ function initFlowers(showAvocados = false) {
             if (p.x < -100) p.x = canvas.width + 100;
             if (p.x > canvas.width + 100) p.x = -100;
         });
+
+        // Draw Custom Effects
+        if (specialEffect === 'soccer' && ball.active) {
+            const groundY = canvas.height - 20;
+            ball.x += ball.vx;
+            ball.rot += ball.vx * 0.05;
+            ctx.save();
+            ctx.translate(ball.x, groundY - 15);
+            ctx.rotate(ball.rot);
+            ctx.font = '30px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('⚽', 0, 0);
+            ctx.restore();
+            
+            if (ball.x > (canvas.width/2) + 1200 || ball.x < (canvas.width/2) - 1200) {
+                ball.active = false;
+            }
+        }
+
+        if (specialEffect === 'sprigatito' && sprigImg && sprigImg.complete) {
+            const groundY = canvas.height - 20;
+            sprig.x += sprig.vx;
+            sprig.frame += 0.15;
+            sprig.y = Math.abs(Math.sin(sprig.frame)) * 15; // Hopping motion
+            
+            if (sprig.x > (canvas.width/2) + 400) sprig.vx = -Math.abs(sprig.vx);
+            if (sprig.x < (canvas.width/2) - 400) sprig.vx = Math.abs(sprig.vx);
+
+            ctx.save();
+            ctx.translate(sprig.x, groundY - sprig.y - 40);
+            if (sprig.vx < 0) ctx.scale(-1, 1);
+            ctx.drawImage(sprigImg, -48, -48, 96, 96);
+            ctx.restore();
+        }
 
         ctx.restore();
         requestAnimationFrame(animate);
