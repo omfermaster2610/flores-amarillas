@@ -2,7 +2,8 @@ let ytPlayer;
 let ytPlayerReady = false;
 let pendingVideoId = null;
 
-window.onYouTubeIframeAPIReady = function () {
+function initYTPlayer() {
+    if (ytPlayer) return; // Prevent double init
     ytPlayer = new YT.Player('ytplayer', {
         height: '240',
         width: '320',
@@ -33,7 +34,15 @@ window.onYouTubeIframeAPIReady = function () {
             }
         }
     });
+}
+
+window.onYouTubeIframeAPIReady = function () {
+    initYTPlayer();
 };
+
+if (typeof YT !== 'undefined' && YT && YT.Player) {
+    initYTPlayer();
+}
 
 class MessageGenerator {
     static getGreetings(name) {

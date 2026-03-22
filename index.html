@@ -41,8 +41,8 @@
         </audio>
     </section>
 
-    <!-- YouTube Player -->
-    <div style="position: absolute; left: -9999px; top: -9999px;">
+    <!-- YouTube Player (transparent but in-viewport to avoid Chrome autoplay blocks) -->
+    <div style="opacity: 0; pointer-events: none; position: absolute; top: 0; left: 0; z-index: -1;">
         <div id="ytplayer"></div>
     </div>
     <script src="https://www.youtube.com/iframe_api"></script>
