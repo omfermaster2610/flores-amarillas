@@ -21,11 +21,13 @@ window.onYouTubeIframeAPIReady = function () {
                 ytPlayerReady = true;
                 if (pendingVideoId) {
                     ytPlayer.loadVideoById(pendingVideoId);
+                    ytPlayer.playVideo();
                     pendingVideoId = null;
                 }
             },
             'onStateChange': function (event) {
                 if (event.data === YT.PlayerState.ENDED) {
+                    ytPlayer.seekTo(0);
                     ytPlayer.playVideo();
                 }
             }
@@ -189,6 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             if (ytPlayerReady && typeof ytPlayer.loadVideoById === 'function') {
                 ytPlayer.loadVideoById(videoId);
+                ytPlayer.playVideo();
             } else {
                 // If API hasn't loaded or isn't ready yet, queue it.
                 pendingVideoId = videoId;
