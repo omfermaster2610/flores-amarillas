@@ -228,6 +228,13 @@ document.addEventListener("DOMContentLoaded", () => {
         giftScreen.classList.remove("hidden");
         giftScreen.classList.add("active");
 
+        const isValentina = normalizedKey.includes("valentina");
+        if (isValentina) {
+            giftScreen.classList.add("bg-valentina");
+        } else {
+            giftScreen.classList.remove("bg-valentina");
+        }
+
         // Start flower animation
         initFlowers(isBro, normalizedKey);
     });
@@ -235,6 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // --- Flower Drawing Logic (Canvas) ---
 function initFlowers(showAvocados = false, personKey = "") {
+    const isValentina = personKey.includes("valentina");
     let specialEffect = null;
     if (personKey.includes("danna")) specialEffect = 'soccer';
     else if (personKey.includes("juli") || personKey.includes("dayana")) specialEffect = 'sprigatito';
@@ -501,9 +509,12 @@ function initFlowers(showAvocados = false, personKey = "") {
 
     function animate() {
         // Subtle motion blur trail instead of solid clear
-        ctx.fillStyle = (phase === 'TRACKING_SEED') ? 'rgba(0, 5, 0, 0.4)' : 'transparent';
-        if (phase !== 'TRACKING_SEED') ctx.clearRect(0, 0, canvas.width, canvas.height);
-        else ctx.fillRect(0, 0, canvas.width, canvas.height);
+        if (phase === 'TRACKING_SEED') {
+            ctx.fillStyle = isValentina ? 'rgba(0, 10, 30, 0.4)' : 'rgba(0, 5, 0, 0.4)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+        } else {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
 
         // Camera Action Logic
         if (phase === 'TRACKING_SEED' && seeds.length > 0 && seeds[0].isMain) {

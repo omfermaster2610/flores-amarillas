@@ -142,6 +142,11 @@ button:active {
     z-index: 5;
     background: #000; /* Darker background to make flowers pop, or very dark green */
     background: radial-gradient(circle at center, #1a2a1f 0%, #0a100c 100%);
+    transition: background 1s ease-in-out;
+}
+
+#gift-screen.bg-valentina {
+    background: radial-gradient(circle at center, #001f3f 0%, #000c19 100%);
 }
 
 #flower-canvas {
