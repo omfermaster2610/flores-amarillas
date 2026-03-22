@@ -780,11 +780,14 @@ function initFlowers(showAvocados = false, personKey = "") {
                     let screenX = (canvas.width / 2 + shakeX) + (spriteObj.x - cam.x) * cam.scale;
                     let screenY = (canvas.height / 2 + shakeY) + ((groundY - spriteObj.y - spriteObj.h / 2) - cam.y) * cam.scale;
                     let scaleX = spriteObj.vx < 0 ? -1 : 1;
-                    //if (specialEffect === 'dimas') scaleX *= -1;
+                    if (personKey.toLowerCase().includes("dimas")) scaleX *= -1;
 
                     overlay.style.left = (screenX - spriteObj.w / 2) + 'px';
                     overlay.style.top = (screenY - spriteObj.h / 2) + 'px';
-                    overlay.style.transform = `scale(${cam.scale * scaleX}, ${cam.scale})`;
+                    
+                    // Using rotateY for horizontal flip can sometimes be more compatible
+                    const rotation = scaleX < 0 ? 'rotateY(180deg)' : 'rotateY(0deg)';
+                    overlay.style.transform = `scale(${cam.scale}) ${rotation}`;
                 }
             }
         }
