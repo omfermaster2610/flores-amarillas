@@ -32,7 +32,7 @@ function initYTPlayer() {
                     ytPlayer.playVideo();
                 }
             },
-            'onError': function(event) {
+            'onError': function (event) {
                 // If the selected YouTube video has embedding disabled (Error 101/150)
                 console.log("YouTube API Error:", event.data);
                 const bg = document.getElementById('bg-music');
@@ -116,7 +116,7 @@ const specificFriends = {
     "akire": { msg: "Quiubo angela, Feliz dia de las flores amarillas, dele gracias a Antigravity por esto jajaj", song: "https://www.youtube.com/watch?v=ow083mzYweE" },
     "aleja": { msg: "Quiubo angela, Feliz dia de las flores amarillas, dele gracias a Antigravity por esto jajaj", song: "https://www.youtube.com/watch?v=ow083mzYweE" },
     "pluton": { msg: "Quiubo angela, Feliz dia de las flores amarillas, dele gracias a Antigravity por esto jajaj", song: "https://www.youtube.com/watch?v=ow083mzYweE" },
-    "adriana": { msg: "Adriana, Feliz dia para sumerce mi Casi-Ingeniera, muchos éxitos para lo que venga.", song: "https://www.youtube.com/watch?v=594smhY4o6U" },
+    "adriana": { msg: "Adriana, Feliz dia para sumerce mi Casi-Ingeniera, muchos éxitos para lo que venga.", song: "https://www.youtube.com/watch?v=R4_1BdjoegY" },
     "maria jose": { msg: "Hola majo, Me avisa para jugar mario kart, mientras disfrute", song: "https://youtu.be/t6YNGmcbqUY?si=o0LjZzhpNMRbVCiq" },
     "majo": { msg: "Hola majo, Me avisa para jugar mario kart, mientras disfrute", song: "https://youtu.be/t6YNGmcbqUY?si=o0LjZzhpNMRbVCiq" },
     "valentina": { msg: "Hola valen, cuando tenga un control jugamos al hollow, mientras le regalo esas flores jajaj estan cheveres no?", song: "https://www.youtube.com/watch?v=cGsAfhE0iYY" },
@@ -131,7 +131,8 @@ const specificFriends = {
     "Mama kathe": { msg: "Hola Kathe, feliz dia de las flores amarillas jajsj", song: "https://www.youtube.com/watch?v=S7gMzYqXIZc" },
     "yelitza": { msg: "Buenas buenas yelitza, como se encuentra el dia de hoy? espero que bien, aqui un detalle pa uste", song: "https://youtu.be/Fkw4OleMP6s?si=11jQhBsAWkYB5cOm" },
     "dimas": { msg: "Hola peruviano, cuando unas retas en el umamusume mi causamigo", song: "https://youtu.be/8sp8DRXgh8c?si=NNoHp6VJ6dsu8JNd" },
-    "gina": { msg: "Ginaaa, gracias por su alegría de siempre, se merece lo mejor 🙏🙏🙏", song: "https://youtu.be/nfmdbKeSh7I?si=tZCTsCKkthT_B5HU" }
+    "Angie": { msg: "buenas Angie, gracias por su alegría de siempre, se merece lo mejor 🙏🙏🙏", song: "https://www.youtube.com/watch?v=nfmdbKeSh7I" },
+    "gina": { msg: "Ginaaa, gracias por su alegría de siempre, se merece lo mejor 🙏🙏🙏", song: "https://www.youtube.com/watch?v=nfmdbKeSh7I" }
 };
 
 const maleBrosNames = ["uri", "jaider", "luis", "sebastian", "benja", "solano", "jesus", "german", "anderson", "Miguel", "Camilo", "mapache", "omar", "carlos", "sergio", "checho", "victor", "stiven", "steven"];
