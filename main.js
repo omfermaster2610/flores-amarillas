@@ -131,8 +131,8 @@ const specificFriends = {
     "Mama kathe": { msg: "Hola Kathe, feliz dia de las flores amarillas jajsj", song: "https://www.youtube.com/watch?v=S7gMzYqXIZc" },
     "yelitza": { msg: "Buenas buenas yelitza, como se encuentra el dia de hoy? espero que bien, aqui un detalle pa uste", song: "https://youtu.be/Fkw4OleMP6s?si=11jQhBsAWkYB5cOm" },
     "dimas": { msg: "Hola peruviano, cuando unas retas en el umamusume mi causamigo", song: "https://youtu.be/8sp8DRXgh8c?si=NNoHp6VJ6dsu8JNd" },
-    "angie": { msg: "buenas Angie, gracias por su alegría de siempre, se merece lo mejor 🙏🙏🙏", song: "https://www.youtube.com/watch?v=nfmdbKeSh7I" },
-    "gina": { msg: "Ginaaa, gracias por su alegría de siempre, se merece lo mejor 🙏🙏🙏", song: "https://www.youtube.com/watch?v=nfmdbKeSh7I" }
+    "angie": { msg: "buenas Angie, gracias por su alegría de siempre, se merece lo mejor 🙏🙏🙏", song: "https://www.youtube.com/watch?v=S7gMzYqXIZc" },
+    "gina": { msg: "Ginaaa, gracias por su alegría de siempre, se merece lo mejor 🙏🙏🙏", song: "https://www.youtube.com/watch?v=S7gMzYqXIZc" }
 };
 
 const maleBrosNames = ["uri", "jaider", "luis", "sebastian", "benja", "solano", "jesus", "german", "anderson", "Miguel", "Camilo", "mapache", "daniel", "omar", "carlos", "sergio", "checho", "victor", "stiven", "steven"];
