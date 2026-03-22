@@ -130,6 +130,7 @@ const specificFriends = {
     "kathe": { msg: "Hola Kathe, feliz dia de las flores amarillas jajsj", song: "https://www.youtube.com/watch?v=S7gMzYqXIZc" },
     "Mama kathe": { msg: "Hola Kathe, feliz dia de las flores amarillas jajsj", song: "https://www.youtube.com/watch?v=S7gMzYqXIZc" },
     "yelitza": { msg: "Buenas buenas yelitza, como se encuentra el dia de hoy? espero que bien, aqui un detalle pa uste", song: "https://youtu.be/Fkw4OleMP6s?si=11jQhBsAWkYB5cOm" },
+    "genesis": { msg: "Whataheeeeeeeel noweieieeee ooomagaad hola si", song: "https://www.youtube.com/watch?v=8a5fCBTnCCo" },
     "dimas": { msg: "Hola peruviano, cuando unas retas en el umamusume mi causamigo", song: "https://youtu.be/8sp8DRXgh8c?si=NNoHp6VJ6dsu8JNd" },
     "angie": { msg: "buenas Angie, gracias por su alegría de siempre, se merece lo mejor 🙏🙏🙏", song: "https://www.youtube.com/watch?v=S7gMzYqXIZc" },
     "gina": { msg: "Ginaaa, gracias por su alegría de siempre, se merece lo mejor 🙏🙏🙏", song: "https://www.youtube.com/watch?v=S7gMzYqXIZc" }
@@ -247,9 +248,10 @@ function initFlowers(showAvocados = false, personKey = "") {
     if (personKey.includes("danna")) specialEffect = 'soccer';
     else if (personKey.includes("juli") || personKey.includes("dayana")) specialEffect = 'sprigatito';
     else if (personKey.includes("yelitza") || personKey.includes("gina")) specialEffect = 'kitten';
+    else if (personKey.includes("genesis")) specialEffect = 'cow';
     else if (personKey.includes("majo")) specialEffect = 'turbo';
     else if (personKey.includes("dimas")) specialEffect = 'dimas';
-    else if (personKey.includes("negra")) specialEffect = 'rimax';
+    else if (personKey.includes("negra") || personKey.includes("monica") || personKey.includes("benja")) specialEffect = 'rimax';
 
     let spriteImg = null;
     let spriteObj = { x: window.innerWidth / 2 - 300, y: 0, vx: 1.5, frame: 0, w: 150, h: 150, isEmoji: false, emoji: '' };
@@ -274,6 +276,10 @@ function initFlowers(showAvocados = false, personKey = "") {
         spriteObj.isEmoji = true;
         spriteObj.emoji = '🐈';
         spriteObj.vx = 2.0;
+    } else if (specialEffect === 'cow') {
+        spriteObj.isEmoji = true;
+        spriteObj.emoji = '🐄';
+        spriteObj.vx = 1.8;
     }
 
     let ball = { x: 0, vx: 5, rot: 0, active: false };
@@ -784,7 +790,7 @@ function initFlowers(showAvocados = false, personKey = "") {
 
                     overlay.style.left = (screenX - spriteObj.w / 2) + 'px';
                     overlay.style.top = (screenY - spriteObj.h / 2) + 'px';
-                    
+
                     // Using rotateY for horizontal flip can sometimes be more compatible
                     const rotation = scaleX < 0 ? 'rotateY(180deg)' : 'rotateY(0deg)';
                     overlay.style.transform = `scale(${cam.scale}) ${rotation}`;
