@@ -31,6 +31,13 @@ function initYTPlayer() {
                     ytPlayer.seekTo(0);
                     ytPlayer.playVideo();
                 }
+            },
+            'onError': function(event) {
+                // If the selected YouTube video has embedding disabled (Error 101/150)
+                console.log("YouTube API Error:", event.data);
+                const bg = document.getElementById('bg-music');
+                bg.src = "https://cdn.pixabay.com/download/audio/2022/10/25/audio_2471fd6a95.mp3";
+                bg.play().catch(e => console.log(e));
             }
         }
     });
