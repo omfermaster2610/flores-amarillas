@@ -130,7 +130,7 @@ const specificFriends = {
     "kathe": { msg: "Hola Kathe, feliz dia de las flores amarillas jajsj", song: "https://www.youtube.com/watch?v=S7gMzYqXIZc" },
     "Mama kathe": { msg: "Hola Kathe, feliz dia de las flores amarillas jajsj", song: "https://www.youtube.com/watch?v=S7gMzYqXIZc" },
     "yelitza": { msg: "Buenas buenas yelitza, como se encuentra el dia de hoy? espero que bien, aqui un detalle pa uste", song: "https://youtu.be/Fkw4OleMP6s?si=11jQhBsAWkYB5cOm" },
-    "genesis": { msg: "Whataheeeeeeeel noweieieeee ooomagaad hola si", song: "https://www.youtube.com/watch?v=8a5fCBTnCCo" },
+    "genesis": { msg: "Buenas buenas Genesis, como se encuentra el dia de hoy? espero que bien, aqui un detalle pa uste", song: "https://www.youtube.com/watch?v=S7gMzYqXIZc" },
     "dimas": { msg: "Hola peruviano, cuando unas retas en el umamusume mi causamigo", song: "https://youtu.be/8sp8DRXgh8c?si=NNoHp6VJ6dsu8JNd" },
     "angie": { msg: "buenas Angie, gracias por su alegría de siempre, se merece lo mejor 🙏🙏🙏", song: "https://www.youtube.com/watch?v=S7gMzYqXIZc" },
     "gina": { msg: "Ginaaa, gracias por su alegría de siempre, se merece lo mejor 🙏🙏🙏", song: "https://www.youtube.com/watch?v=S7gMzYqXIZc" }
@@ -174,15 +174,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const originalNormalized = name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         const normalizedKey = originalNormalized.replace(/\s+/g, "");
 
-        if (maleBrosNames.some(bro => new RegExp(`\\b${bro}\\b`).test(originalNormalized))) {
+        if (maleBrosNames.some(bro => new RegExp(`\\b${bro.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}\\b`).test(originalNormalized))) {
             isBro = true;
             finalMessage = "Papi, feliz dia de las flores amarillas para usted mi rey, que me le vaya bien y cuidese ese cuerpo, lo tqm";
             finalSong = "https://www.youtube.com/watch?v=loduYZcFRtE"; // Some bro/funny default acoustic song
         } else {
             // Find specific female
             let foundSpecific = false;
+            const normalizedInput = normalizedKey; // already lowercased and no spaces
+            
             for (const key in specificFriends) {
-                if (normalizedKey.includes(key)) {
+                const normalizedFriendKey = key.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "");
+                if (normalizedInput.includes(normalizedFriendKey)) {
                     finalMessage = specificFriends[key].msg;
                     finalSong = specificFriends[key].song;
                     foundSpecific = true;
