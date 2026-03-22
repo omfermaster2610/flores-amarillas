@@ -138,8 +138,6 @@ const specificFriends = {
 
 const maleBrosNames = ["uri", "jaider", "luis", "sebastian", "benja", "solano", "jesus", "german", "anderson", "Miguel", "Camilo", "mapache", "daniel", "omar", "carlos", "sergio", "checho", "victor", "stiven", "steven"];
 
-// ...
-
 document.addEventListener("DOMContentLoaded", () => {
     const landingScreen = document.getElementById("landing-screen");
     const giftScreen = document.getElementById("gift-screen");
