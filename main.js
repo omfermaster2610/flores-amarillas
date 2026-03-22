@@ -237,13 +237,35 @@ document.addEventListener("DOMContentLoaded", () => {
 function initFlowers(showAvocados = false, personKey = "") {
     let specialEffect = null;
     if (personKey.includes("danna")) specialEffect = 'soccer';
-    if (personKey.includes("juli") || personKey.includes("dayana")) specialEffect = 'sprigatito';
+    else if (personKey.includes("juli") || personKey.includes("dayana")) specialEffect = 'sprigatito';
+    else if (personKey.includes("yelitza") || personKey.includes("gina")) specialEffect = 'kitten';
+    else if (personKey.includes("majo")) specialEffect = 'anya';
+    else if (personKey.includes("dimas")) specialEffect = 'dimas';
+    else if (personKey.includes("negra")) specialEffect = 'rimax';
 
-    let sprigImg = null;
-    let sprig = { x: window.innerWidth / 2 - 300, y: 0, vx: 1.5, frame: 0 };
+    let spriteImg = null;
+    let spriteObj = { x: window.innerWidth / 2 - 300, y: 0, vx: 1.5, frame: 0, w: 96, h: 96, isEmoji: false, emoji: '' };
+    
     if (specialEffect === 'sprigatito') {
-        sprigImg = new Image();
-        sprigImg.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/906.png";
+        spriteImg = new Image();
+        spriteImg.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/906.png";
+    } else if (specialEffect === 'anya') {
+        spriteImg = new Image();
+        spriteImg.src = "anya.png";
+        spriteObj.w = 120; spriteObj.h = 120;
+    } else if (specialEffect === 'dimas') {
+        spriteImg = new Image();
+        spriteImg.src = "dimas.gif"; 
+        spriteObj.w = 120; spriteObj.h = 120;
+    } else if (specialEffect === 'rimax') {
+        spriteImg = new Image();
+        spriteImg.src = "rimax.png"; 
+        spriteObj.w = 120; spriteObj.h = 120;
+    } else if (specialEffect === 'kitten') {
+        spriteObj.isEmoji = true;
+        spriteObj.emoji = '🐈';
+        spriteObj.vx = 2.0;
+        spriteObj.w = 60; spriteObj.h = 60;
     }
 
     let ball = { x: 0, vx: 5, rot: 0, active: false };
@@ -701,19 +723,34 @@ function initFlowers(showAvocados = false, personKey = "") {
             }
         }
 
-        if (specialEffect === 'sprigatito' && sprigImg && sprigImg.complete) {
+        if (specialEffect && specialEffect !== 'soccer' && (spriteObj.isEmoji || (spriteImg && spriteImg.complete))) {
             const groundY = canvas.height - 20;
-            sprig.x += sprig.vx;
-            sprig.frame += 0.15;
-            sprig.y = Math.abs(Math.sin(sprig.frame)) * 15; // Hopping motion
             
-            if (sprig.x > (canvas.width/2) + 400) sprig.vx = -Math.abs(sprig.vx);
-            if (sprig.x < (canvas.width/2) - 400) sprig.vx = Math.abs(sprig.vx);
+            if (specialEffect === 'rimax') {
+                spriteObj.vx = 0;
+                spriteObj.x = canvas.width / 2 + 150;
+                spriteObj.y = -40; // Silla Rimax quietecita ahí atrás
+            } else {
+                spriteObj.x += spriteObj.vx;
+                spriteObj.frame += 0.15;
+                spriteObj.y = Math.abs(Math.sin(spriteObj.frame)) * 15; // Brincando
+                
+                if (spriteObj.x > (canvas.width/2) + 400) spriteObj.vx = -Math.abs(spriteObj.vx);
+                if (spriteObj.x < (canvas.width/2) - 400) spriteObj.vx = Math.abs(spriteObj.vx);
+            }
 
             ctx.save();
-            ctx.translate(sprig.x, groundY - sprig.y - 40);
-            if (sprig.vx < 0) ctx.scale(-1, 1);
-            ctx.drawImage(sprigImg, -48, -48, 96, 96);
+            ctx.translate(spriteObj.x, groundY - spriteObj.y - (spriteObj.h/2));
+            if (spriteObj.vx < 0) ctx.scale(-1, 1);
+            
+            if (spriteObj.isEmoji) {
+                ctx.font = '60px Arial';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(spriteObj.emoji, 0, 0);
+            } else {
+                ctx.drawImage(spriteImg, -spriteObj.w/2, -spriteObj.h/2, spriteObj.w, spriteObj.h);
+            }
             ctx.restore();
         }
 
