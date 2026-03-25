@@ -114,6 +114,7 @@ const specificFriends = {
     "luna": { msg: "Un dia de estos me acuerda de visitar panamá, la buena jajs", song: "https://youtu.be/XWX_j3b9ZeE?si=MCr_2Rf3pnmgYnRW" },
     "erika": { msg: "Quiubo angela, Feliz dia de las flores amarillas, dele gracias a Antigravity por esto jajaj", song: "https://www.youtube.com/watch?v=ow083mzYweE" },
     "akire": { msg: "Quiubo angela, Feliz dia de las flores amarillas, dele gracias a Antigravity por esto jajaj", song: "https://www.youtube.com/watch?v=ow083mzYweE" },
+    "angela": { msg: "Hola si, feliz dia de las flores amarillas, que pena mostrar esto tan tarde jajaj pero x esta chimba", song: "https://youtu.be/C4K6JJn_Z_M?si=fwLQs_aWYdPEaEfo" },
     "aleja": { msg: "Quiubo angela, Feliz dia de las flores amarillas, dele gracias a Antigravity por esto jajaj", song: "https://www.youtube.com/watch?v=ow083mzYweE" },
     "pluton": { msg: "Quiubo angela, Feliz dia de las flores amarillas, dele gracias a Antigravity por esto jajaj", song: "https://www.youtube.com/watch?v=ow083mzYweE" },
     "adriana": { msg: "Adriana, Feliz dia para sumerce mi Ingeniera, muchos éxitos para lo que venga.", song: "https://www.youtube.com/watch?v=81WhM9dOcYI" },
